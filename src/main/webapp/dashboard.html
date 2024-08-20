@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Link to CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Event Management Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="create-event.html">Create Event</a></li>
+                <li><a href="manage-users.html">Manage Users</a></li>
+                <li><a href="logout">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome,</h2>
+
+        <section id="upcoming-events">
+            <h3>Upcoming Events</h3>
+            <ul id="event-list">
+                <!-- Example static events; in a real system, this should be dynamically populated -->
+                <li>Event 1 - 2024-08-20 10:00 AM</li>
+                <li>Event 2 - 2024-08-21 2:00 PM</li>
+                <!-- More events can be dynamically added here -->
+            </ul>
+        </section>
+
+        <section id="manage">
+            <h3>Manage Your Account</h3>
+            <p><a href="update-profile.html">Update Profile</a></p>
+            <p><a href="change-password.html">Change Password</a></p>
+        </section>
+
+        <section id="admin">
+            <h3>Admin Actions</h3>
+            <p><a href="create-event.html">Add New Event</a></p>
+            <p><a href="manage-users.html">Manage Users</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

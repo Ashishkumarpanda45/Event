@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="date"],
+        .form-container input[type="time"],
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Create Event</h2>
+        <form action="eventservlet" method="post">
+            <input type="hidden" name="action" value="create">
+            
+            <label for="title">Event Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Event Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Event Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="location">Event Location:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="category">Event Category:</label>
+            <select id="category" name="category" required>
+                <option value="Conference">Conference</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Meetup">Meetup</option>
+            </select>
+            
+            <button type="submit">Create Event</button>
+        </form>
+    </div>
+
+</body>
+</html>
